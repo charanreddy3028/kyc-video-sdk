@@ -2,7 +2,7 @@
 
 This project integrates VideoSDK, OpenAI Realtime APIs and Gemini Vision API to analyse screenshare stream in realtime
 
-[![Gemini AI Vision Agent](https://assets.videosdk.live/images/Gemini%20Vision%20API%20%283%29.png)](https://youtu.be/gjvJd-carXg?si=0RH8-NJ-wXpLG6hy)
+<!-- [![Gemini AI Vision Agent](https://assets.videosdk.live/images/Gemini%20Vision%20API%20%283%29.png)](https://youtu.be/gjvJd-carXg?si=0RH8-NJ-wXpLG6hy) -->
 
 ### Start with the project
 

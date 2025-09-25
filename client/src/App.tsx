@@ -64,7 +64,7 @@ function App() {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-8 flex items-center justify-center gap-3">
             <Bot className="w-12 h-12 text-blue-400" />
-            Explore Vision AI with VideoSDK
+            Nxtwave KYC Assistant
           </h1>
           <button
             onClick={createMeeting}

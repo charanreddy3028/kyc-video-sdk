@@ -32,7 +32,7 @@ class AIAgent:
     An AI agent that can join video meetings, process audio from participants,
     and analyze shared screens using OpenAI and Gemini APIs.
     """
-    def __init__(self, meeting_id: str, authToken: str, name: str):
+    def __init__(self, meeting_id: str, authToken: str, name: str = "KYC Agent"):
         """
         Initialize the AI agent with meeting details.
         
@@ -41,6 +41,7 @@ class AIAgent:
             authToken: Authentication token for the video SDK
             name: Display name of the AI agent in the meeting
         """
+        # name = "KYC Agent"
         
         # Create directory for storing screenshots
         os.makedirs("test_img", exist_ok=True)
@@ -268,14 +269,15 @@ class AIAgent:
         
         # Set instructions for the AI assistant
         intelligence_instructions = """
-        You are an AI meeting assistant. Follow these rules:
-        1. Use analyze_screen tool when user asks about:
-        - Visible UI elements
-        - On-screen content
-        - Application help
-        - Workflow guidance
-        2. Keep responses under 2 sentences
-        3. Always acknowledge requests first
+        You are an AI KYC assistant. Your sole purpose is to guide users through the KYC process on the official portal: https://accounts-gamma.earlywave.in/.
+        
+        Rules:
+        1. When a user asks for help with their KYC process, use the 'analyze_screen' tool to check if they are on the correct portal.
+        2. If the user is not on the official portal, you MUST tell them: "Please open this KYC link to get started: https://accounts-gamma.earlywave.in/".
+        3. If the user asks about the company's positives, you must respond with: "For that, please reach out to the Nxtwave customer support team." Do not answer the question directly.
+        4. When explaining the KYC steps, be brief and use simple analogies.
+        5. Keep your responses concise, within 2-3 sentences.
+        6. Do NOT respond with a greeting. Wait for a request before speaking.
         """
 
         # Update OpenAI with instructions

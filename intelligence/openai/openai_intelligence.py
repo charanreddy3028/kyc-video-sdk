@@ -41,13 +41,13 @@ class OpenAIIntelligence:
         self, 
         loop: AbstractEventLoop, 
         api_key,
-        model: str = "gpt-4o-realtime-preview-2024-10-01",  # Default model for real-time API
+        model: str = "gpt-4o-mini-2024-07-18",  # Default model for real-time API
         instructions="""\
             Actively listen to the user's questions and provide concise, relevant responses. 
             Acknowledge the user's intent before answering. Keep responses under 2 sentences.\
         """,  # Default system instructions
         base_url: str = "api.openai.com",
-        voice: Voices = Voices.Alloy,  # Default voice for speech synthesis
+        voice: Voices = Voices.Echo,  # Default voice for speech synthesis
         temperature: float = 0.8,  # Controls randomness in generation
         tools: List[Dict[str, Union[str, any]]] = [],  # Available function-calling tools
         input_audio_transcription: InputAudioTranscription = InputAudioTranscription(

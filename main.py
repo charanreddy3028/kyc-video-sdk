@@ -25,7 +25,7 @@ async def server_operations(req:MeetingReqConfig):
     # join ai agent
     # keep server alive
     global ai_agent
-    ai_agent = AIAgent(req.meeting_id, req.token, "AI")
+    ai_agent = AIAgent(req.meeting_id, req.token, "Nxtwave KYC Assistant")
     
     try:
         await ai_agent.join()
